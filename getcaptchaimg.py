@@ -23,7 +23,7 @@ url = "https://slcm.manipal.edu/loginForm.aspx"
 resp = requests.get(url, headers=headers)
 chrome_options = Options()
 # chrome_options.add_argument('--window-size=800,800')
-# chrome_options.add_argument('headless')
+chrome_options.add_argument('headless')
 chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--disable-extensions")
