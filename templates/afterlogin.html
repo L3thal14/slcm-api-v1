@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Results</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='afterlogin/assets/css/main.css')}}"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="{{url_for('static',filename='afterlogin/assets/css/noscript.css')}}"
+    /></noscript>
+  </head>
+  <body class="is-preload landing">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="/login"><span>&#8592;</span> Go Back</a>
+        </h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="#one">Attendance</a></li>
+            <li><a href="#two">Marks</a></li>
+            <li><a href="#three">Calendar</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Banner -->
+      <section id="banner">
+        <div class="content">
+          <header>
+            <h2>WELCOME</h2>
+            <p>{{greetingname}}</p>
+          </header>
+          <span class="image"><img src="{{datauri}}" alt="" /></span>
+        </div>
+        <a href="#one" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- One -->
+      <section id="one" class="spotlight style1 bottom">
+        <div class="content">
+          <div class="container">
+            {{atten|safe}}
+            <div class="row"></div>
+          </div>
+        </div>
+        <a href="#two" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Two -->
+      <section
+        id="two"
+        class="spotlight style1 bottom"
+        style="height: 500vh; margin: 0 auto"
+      >
+        <div class="content" style="opacity: 100">
+          <div class="container">
+            {{mark|safe}}
+            <div class="row"></div>
+          </div>
+        </div>
+        <a href="#three" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Three -->
+      <section id="three" class="spotlight style1 bottom">
+        <div class="content">
+          <div class="container">
+            {{cal|safe}}
+            <div class="row"></div>
+          </div>
+        </div>
+        <a href="#footer" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Five -->
+      <section id="four" class="wrapper style2 special fade">
+        <div class="container">
+          <h1>
+            <a href="/login"><span>&#8592;</span> Go Back</a>
+          </h1>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://github.com/l3thal14/slcm-api-v1"
+              class="icon brands alt fa-github"
+              target="_blank"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{url_for('static',filename='afterlogin/assets/js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/jquery.scrolly.min.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/jquery.dropotron.min.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/jquery.scrollex.min.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/browser.min.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/breakpoints.min.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/util.js')}}"></script>
+    <script src="{{url_for('static',filename='afterlogin/assets/js/main.js')}}"></script>
+  </body>
+</html>
